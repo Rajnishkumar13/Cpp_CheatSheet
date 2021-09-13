@@ -1,0 +1,397 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=CheetSheet_cpp, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital@1&display=swap" rel="stylesheet">
+    <link rel="Stylesheet" href="style.css">
+    <link rel="stylesheet" href="prism.css">
+    <script src="prism.js"></script>
+    <title>Document</title>
+</head>
+<body>
+    <nav>
+        <span class="logo"><img src="copy.png" alt=""></span>
+        <div class="content_center">
+            This is C++ CheatSheet for all of us!!!
+        </div>
+    </nav>
+    <div class="container">
+        <ol>
+            <li><h1>C++ Boilerplate</h1>
+                <pre class="language-cpp"><code>#include &ltiostream&gt
+using namespace std;
+    
+int main()
+{
+    cout<<"Hello World";
+
+    return 0;
+}
+    </code></pre>
+            </li>
+            <li><h2>To print output on the screen:</h2>  <h3>cout &lt&lt</h3>
+                <pre class="language-cpp"><code>cout &lt&lt "Hello World!!!";</code></pre>
+            </li>
+            <li><h2>To take input from user:</h2><h3>cin &gt&gt</h3>
+                <pre class="language-cpp"><code>cin &gt&gt variable_name;</code></pre>
+            </li>
+            <li><h1>Data Types:</h1>
+                <ul>
+                    <li><h2>Primitive Data Types</h2>
+<pre class="language-cpp"><code>Integer: int variable_name;</code></pre>
+<pre class="language-cpp"><code>Character: char variable_name;</code></pre>
+<pre class="language-cpp"><code>Boolean: bool variable_name;</code></pre>
+<pre class="language-cpp"><code>Floating Point: float variable_name;</code></pre>
+<pre class="language-cpp"><code>Double Floating Point: double variable_name;</code></pre>
+<pre class="language-cpp"><code>Void: void variable_name;</code></pre>
+                    </li>
+                    <li><h2>Derived Data Types</h2>
+<pre class="language-cpp"><code>Array: DataType array_name[array_size];</code></pre>
+<pre class="language-cpp"><code>Function: FunctionType FunctionName(parameters);</code></pre>
+<pre class="language-cpp"><code>Pointers: datatype *var_name;</code></pre>
+<pre class="language-cpp"><code>Reference: int & reference_variable_name;</code></pre>
+                    </li>
+                    <li><h2>Abstract Data Types</h2>
+<pre class="language-cpp"><code>Class: class class_name{
+            Access specifiers; // private, public or protected
+            Data members; // variable to be used
+            Member Function; // Methods to access data members
+};</code></pre>
+<pre class="language-cpp"><code>Structure: struct struct_name{
+        Data members; // int age;
+        Data members; // char name[20];
+};</code></pre>
+<pre class="language-cpp"><code>Union: union union_name{
+        int x,y;  // In union, all members share the same memory location.
+};</code></pre>
+<pre class="language-cpp"><code>Enumeration: It is mainly used to assign names to integral constants,
+the names make a program easy to read and maintain. Example
+#include &ltiostream&gt
+using namespace std;
+      
+enum week { 
+    Mon, Tue, Wed, Thur, Fri, Sat, Sun };
+int main()
+{
+    enum week day;
+    day = Wed;
+    cout << day; // 2
+    return 0;
+}
+</code></pre>
+<pre class="language-cpp"><code>Typedef: typedef type name;
+//where 'type' is any C++ data type and name is the new name for this data type.
+// Ex. typedef unsigned char BYTE;
+</code></pre>
+                    </li>
+                </ul>
+            </li>
+            <li><h1>Escape Sequences</h1>
+                <ul>
+                    <li>
+<pre class="language-cpp"><code>\a : Alert (bell, alarm)</code></pre>
+                    </li>
+                    <li>
+<pre class="language-cpp"><code>\b : Backspace</code></pre>
+                    </li>
+                    <li>
+<pre class="language-cpp"><code>\n : New-line</code></pre>
+                    </li>
+                    <li>
+<pre class="language-cpp"><code>\r : Carriage return</code></pre>
+                    </li>
+                    <li>
+<pre class="language-cpp"><code>\t : Horizontal tab</code></pre>
+                    </li>
+                    <li>
+<pre class="language-cpp"><code>\v : Vertical tab</code></pre>
+                    </li>
+                    <li>
+<pre class="language-cpp"><code>\\ : Backslash</code></pre>
+                    </li>
+                    <li>
+<pre class="language-cpp"><code>\' : Single quotation mark</code></pre>
+                    </li>
+                    <li>
+<pre class="language-cpp"><code>\0 : Null character</code></pre>
+                    </li>
+                </ul>
+            </li>
+            <li><h1>Comments</h1>
+                <ul>
+                    <li>
+<pre class="language-cpp"><code>//Single line comments</code></pre>                        
+                    </li>
+                    <li>
+<pre class="language-cpp"><code>/*It's a multiline comments 
+line comments*/</code></pre>                        
+                    </li>
+                </ul>
+            </li>
+            <li><h1>Operator</h1>
+                <ul>
+                    <li>
+                        <h2>Arithmetic Operator:</h2>
+<pre class="language-cpp"><code>+, -, *, /, %, ++, --</code></pre>
+                    </li>
+                    <li>
+                        <h2>Assignment Operator:</h2>
+<pre class="language-cpp"><code>=, =+, =*, &=, &lt&lt=</code></pre>
+                    </li>
+                    <li>
+                        <h2>Comparison Operator:</h2>
+<pre class="language-cpp"><code>==, !=, &lt, &gt=</code></pre>
+                    </li>
+                    <li>
+                        <h2>Logical Operator:</h2>
+<pre class="language-cpp"><code>&&, ||, !</code></pre>
+                    </li>
+                </ul>
+            </li>
+            <li><h1>String and it's functions</h1>
+                <pre class="language-cpp"><code>string greeting = "Hello Brother!!!" // A string variable contains a collection of 
+                                    //characters surrounded by double quotes:</code></pre><h2>Functions:</h2>
+                                    <h2>Append: </h2>
+                                    <h3>It is used to concatenate two strings. Example-</h3>
+                <pre class="language-cpp"><code>
+string str1 = "Hello ";
+string str2 = "World";
+string newstr = str1.append(str2);
+cout &lt;&lt; newstr; // --> Hello World</code></pre>
+                    <h2>CLear: </h2>
+                    <h3>Erases the contents of the string, which becomes an 
+                        empty string (with a length of 0 characters). Example-</h3>
+                <pre class="language-cpp"><code>
+string str1 = "Hello World";
+string newstr = str1.clear();
+cout &lt;&lt; newstr; // --> </code></pre>
+                <h2>Erase:</h2>
+                 <h3>Erases part of the string, reducing its length: Example-</h3>
+                <pre class="language-cpp"><code>
+string str1 = "Hello World";
+string newstr1 = str1.erase(4);
+cout << newstr1; // -->Hell
+string str2 = "Hello World";
+string newstr2 = str2.erase(4,1);
+cout << newstr2; // --> Hell World
+</code></pre>
+            </li>
+            <li><h1>Maths function:</h1>
+                <h2>Ceil:</h2>
+                <pre class="language-cpp"><code>ceil(x) // Returns the value of x rounded up to its nearest integer</code></pre>
+                <h2>Floor:</h2>
+                <pre class="language-cpp"><code>floor(x) // Returns the value of x rounded down to its nearest integer</code></pre>
+                <h2>pow:</h2>
+                <pre class="language-cpp"><code>pow(x, y) // Returns the value of x to the power of y</code></pre>
+            </li>
+            <li><h1>Decision Making Instructions</h1>
+                <h2>If:</h2>
+                <pre class="language-cpp"><code>if (condition) {
+            // This block of code will get executed, if the condition is True
+}</code></pre>
+                <h2>Else if:</h2>
+                <pre class="language-cpp"><code>else if (condition) {
+            // This block of code will get executed, if the condition is True
+}</code></pre>
+                <h2>Else:</h2>
+                <pre class="language-cpp"><code>else{
+    // This block of code will get executed, if the condition is false
+}</code></pre>
+                <h1>Ternary Operator:</h1>
+                <pre class="language-cpp"><code>variable_name = (condition) ? TrueCondition : FalseCondition;
+                 // if condition is true --> variable_name = TrueCondition
+                 // if condition is false --> variable_name = FalseCondition
+                </code></pre>
+                <h1>Switch Case Statement</h1>
+                <h3>The value of the expression is compared with the values of each case
+                    If there is a match, the associated block of code is executed.</h3>
+                    <pre class="language-cpp"><code>switch (expression) 
+{
+case constant-expression: 
+    statement1;
+    statement2;
+    break;
+case constant-expression: 
+    statement;
+    break;
+...
+default: 
+    statement;
+}</code></pre> 
+            </li>
+            <li><h1>Loop:</h1>
+                <h2>For Loop:</h2>
+                <h3>When you know exactly how many times you want to loop through a block of code, use the for loop.</h3>
+                <pre class="language-cpp"><code>for (int i = 0; i &lt; count; i++) {
+        /* code */
+}</code></pre> 
+             <h2>While Loop</h2>
+             <h3>The while loop loops through a block of code as long as a specified condition is true:</h3>
+             <pre class="language-cpp"><code>while (/* condition */) {
+    /* code */
+}</code></pre>
+            <h2>Do-while Loop</h2>
+            <h3>This loop will execute the code block once, before checking if the condition is true, then it will 
+repeat the loop as long as the condition is true.</h3>
+            <pre class="language-cpp"><code>do {
+    // code block to be executed
+} while (condition);</code></pre>
+            </li>
+            <li><h1>Break Statement:</h1>
+                <h2>break keyword inside the loop is used to terminate the loop. Example-</h2>
+                <pre class="language-cpp"><code>for (int i = 0; i &lt; 10; i++) {
+    if (i == 4) {
+        break;
+    }
+    cout &lt;&lt; i &lt;&lt; " "; //--> 0 1 2 3 
+}</code></pre>
+            </li>
+            <li><h1>Continue:</h1>
+                <h2>continue keyword skips the rest of the current iteration of the loop and returns to the starting point of the loop.</h2>
+                <pre class="language-cpp"><code>continue;</code></pre>
+            </li>
+            <li><h1>Reference</h1>
+                <h2>A reference variable is a "reference" to an existing variable, and it is created with the & operator:</h2>
+                <pre class="language-cpp"><code>DataType variable_name1 = value; // string car = "Ford";
+DataType & variable_name2 = variable_name1; // string & automobile = car;
+                </code></pre>
+            </li>
+            <li><h1>pointer</h1>
+                <h2>A pointer is a variable that stores the memory address as its value.</h2>
+                <pre class="language-cpp"><code>DataType variable_name1 = value; // string car = "Ford";
+DataType * variable_name2 = & variable_name1; // string * automobile = & car;
+                </code></pre>
+            </li>
+            <li><h1>Function</h1>
+                <h3>A function is a block of code which only runs when it is called, and they are important for reusing code</h3>
+                <h2>Function Definition</h2>
+                <pre class="language-cpp"><code>return_type function_name(data_type parameter...){ 
+                    //code to be executed 
+}</code></pre>
+                <h2>Function Call</h2>
+                <pre class="language-cpp"><code>function_name(arguments);</code></pre>
+            </li>
+            <li><h1>Recursion</h1>
+                <h3>Recursion is when a function calls a copy of itself to work on a minor problem. And the function that calls itself is 
+                    known as the Recursive function.</h3>
+                <pre class="language-cpp"><code>void recurse()
+{
+... .. ...
+recurse();
+... .. ...
+}</code></pre>
+            </li>
+            <li><h1>OOP (Object-Oriented Programming)</h1>
+                <h3>It is a programming approach that primarily focuses on using objects and classes. The objects can be any real-world entities.</h3>
+                <h2>Class:</h2>
+                <h3>A class is a user-defined data type that we can use in our program, and it works as an object constructor, 
+                    or a "blueprint" for creating objects.
+                </h3>
+                <pre class="language-cpp"><code>class Class_name {
+public: // Access specifier
+// fields
+// functions
+// blocks
+};</code></pre>
+                <h2>Object</h2>
+                <h3>To create an object of Class, specify the class name, followed by the object name.</h3>
+                <pre class="language-cpp"><code>Class_name ObjectName;</code></pre>
+                <h2>Constructor</h2>
+                <h3>A constructor is a special method that is automatically called when an object of a class is created.
+                    To create a constructor, use the same name as the class, followed by parentheses ():
+                </h3>
+                <pre class="language-cpp"><code>class className { // The class
+    public: // Access specifier
+    className() { // Constructor
+        cout &lt;&lt; "hello World";
+    }
+};
+
+int main() {
+className obj_name; 
+return 0;
+}</code></pre>
+                <h2>Encapsulation</h2>
+                <h3>Encapsulation is a mechanism that binds together the data and functions that manipulate the data, 
+                    and that keeps both safe from outside interference and misuse</h3>
+                    <pre class="language-cpp"><code>#include<iostream> 
+using namespace std; 
+class ExampleEncap{ 
+    private: 
+        /* Since we have marked these data members private, 
+        * any entity outside this class cannot access these 
+        * data members directly, they have to use getter and 
+        * setter functions. 
+        */ 
+        int num; 
+        char ch; 
+    public: 
+        /* Getter functions to get the value of data members. 
+        * Since these functions are public, they can be accessed 
+        * outside the class, thus provide the access to data members 
+        * through them 
+        */ 
+        int getNum() const { 
+        return num; 
+        } 
+        char getCh() const { 
+        return ch; 
+        } 
+        /* Setter functions, they are called for assigning the values 
+        * to the private data members. 
+        */ 
+        void setNum(int num) { 
+        this->num = num; 
+        } 
+        void setCh(char ch) { 
+        this->ch = ch; 
+        } 
+}; 
+
+int main(){ 
+    ExampleEncap obj; 
+    obj.setNum(100); 
+    obj.setCh('A'); 
+    cout&lt;&lt;obj.getNum()&lt;&lt;endl; 
+    cout&lt;&lt;obj.getCh()&lt;&lt;endl; 
+return 0; 
+}</code></pre>
+                <h2>Inheritance</h2>
+                <h3>In C++, it is possible to inherit attributes and methods from one class to another.</h3>
+                <pre class="language-cpp"><code>class Base_Class{
+    public: // Access specifier
+    // fields
+    // functions
+    // blocks
+};
+class Derived_Class: public Base_Class{
+    public: // Access specifier
+    // fields
+    // functions
+    // blocks
+};
+                </code></pre>
+            </li>
+            <li><h1>Fast Input/Output</h1>
+                <pre class="language-cpp"><code>#include <bits/stdc++.h>
+using namespace std;
+
+int main()
+{
+    ios_base::sync_with_stdio(false);     // add this line in main function 
+    cin.tie(NULL);                        // add this line too
+    return 0;
+}</code></pre>
+            </li>
+            <!-- <li>C++ Syntax
+                <pre class="language-cpp"><code>var i = 68;</code></pre>
+            </li>
+            <li>C++ Syntax
+                <pre class="language-cpp"><code>var i = 68;</code></pre>
+            </li> -->
+        </ol>
+    </div>
+</body>
+</html>
